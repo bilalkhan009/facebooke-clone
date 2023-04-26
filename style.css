@@ -1,0 +1,1031 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    --med-text: 2.5rem;
+
+    /* colors */
+    --bg-color: hsl(216, 15%, 94%);
+}
+
+body {
+    background: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* utility classess */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+
+/* ####### home/news feed section */
+
+
+/* ######## navbar styling ############# */
+#nav-bar{
+    max-width: 1450px;
+    width: 100%;
+    height: 6rem;
+    background-color: white;
+    position: fixed;
+    top: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em 2em;
+    box-shadow: 0px 0px 10px rgba(69, 69, 69, 0.141);
+}
+
+.left-side{
+    max-width: 400px;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.left-side .fb-logo{
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    padding: 0.1em;
+    /* border: 1px solid red; */
+}
+
+.left-side .input-box{
+    width: 25rem;
+    position: relative;
+    /* border: 1px solid green; */
+}
+.input-box input{
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 10rem;
+    outline: none;
+    background-color: var(--bg-color);
+    padding: 0.9em 0em 0.9em 3em;
+}
+.input-box span{
+    display: block;
+    background: url(./assessts/search-interface-symbol.png) no-repeat center;
+    background-size: 2rem;
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+::placeholder{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+
+.tabs-section{
+    max-width: 700px;
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.icons{
+    width: 10.5rem;
+    height: 5rem;
+    border-radius: 0.7rem;
+    transition: all 300ms ease-out;
+    position: relative;
+}
+.icons:hover{
+    background-color: var(--bg-color);
+}
+.border-bottom{
+    position: relative
+}
+.border-bottom::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 2%;
+    top: 110%;
+    width: 100%;
+    border: 1px solid blue;
+}
+.border-bottom::before{
+    content: "Home";
+    display: inline-block;
+    position: absolute;
+    top: 118%;
+    left: 20%;
+    padding: 0.7em 1em;
+    background-color: rgba(33, 33, 33, 0.654);
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 1rem;
+    visibility: hidden;
+    transition: all 100ms ease-in;
+}
+.border-bottom:hover::before{
+    visibility: visible;
+}
+.home a{
+    margin-left: 0.5rem;
+}
+.icons::after{
+    content: "Watch";
+    display: inline-block;
+    position: absolute;
+    bottom: -85%;
+    left: 20%;
+    padding: 0.7em 1em;
+    background-color: rgba(33, 33, 33, 0.654);
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 1rem;
+    visibility: hidden;
+    transition: all 100ms ease-out;
+}
+.market::after{
+    content: "Marketplace";
+    text-align: center;
+    left: 5%;
+}
+.group::after{
+    content: "Groups";
+}
+.game::after{
+    content: "Games";
+}
+.icons:hover::after{
+    visibility: visible;
+}
+.home{
+    width: 10rem;
+    height: 5rem;
+    padding: 0.8em 1.5em;
+}
+.tabs-section a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.watch-video{
+    display: block;
+    background-image: url(./assessts/watching.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 3.5rem;
+    padding: 2.5em 2em;
+}
+
+.market-place{
+    display: block;
+    background-image: url(./assessts/store.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 3rem;
+    padding: 2.5em 2em;
+}
+.groups{
+    display: block;
+    background-image: url(./assessts/group-user.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5rem;
+    padding: 2.5em 2em;
+}
+.games{
+    display: block;
+    background-image: url(./assessts/joystick.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 3.5rem;
+    padding: 2em 2em;
+}
+.right-side{
+    max-width: 400px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.right-side .icons{
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: var(--bg-color);
+    margin-left: 1rem;
+    border-radius: 50%;
+}
+.right-side .icons:hover{
+    background-color: hsl(216, 15%, 89%);
+}
+.right-side .manu-label::after{
+    content: "Manu";
+    left: 0%;
+}
+
+.right-side .messenger-label::after{
+    content: "Messenger";
+    left: -40%;
+}
+
+.right-side .notific::before{
+    content: "99+";
+    display: block;
+    width: 3rem;
+    font-size: 1.3rem;
+    text-align: center;
+    padding-top: 0.3em;
+    color: white;
+    background-color: red;
+    position: absolute;
+    top: -10%;
+    right: -30%;
+    border-radius: 10rem;
+}
+.right-side .notific-label::after{
+    content: "Notification";
+    left: -50%;
+}
+
+.right-side .account-label::after{
+    content: "Account";
+    left: -35%;
+}
+.right-side .manu{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assessts/manu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2.2rem;
+}
+.right-side .messenger{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assessts/messenger.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2.2rem;
+}
+.right-side .notific{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assessts/bell.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2.2rem;
+}
+.right-side .account{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assessts/user-acccount.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4.5rem;
+    border-radius: 50%;
+}
+/* ##### end navbar ##### */
+
+
+/* ######### main section styling ########## */
+/* لیوانتوب دا مینے */
+.section{
+    width: 100%;
+    height: 100vh;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* border: 1px solid red; */
+}
+.left-sidebar{
+    max-width: 450px;
+    width: 350px;
+    height: 100vh;
+    /* border: 1px solid black; */
+}
+.side-content{
+    width: 100%;
+    padding: 1.5em;
+}
+.side-content .hover-box:hover{
+    background-color: hsl(216, 15%, 89%);
+    border-radius: 0.7rem;
+}
+.side-content a{
+    display: block!important;
+    width: 100%;
+    display: flex!important;
+    align-items: center;
+    padding: 0.8em 0em;
+}
+.side-content .pro-pic{
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem;
+    /* border: 1px solid red; */
+}
+.side-content .account-icon{
+    background: url(./assessts/user-acccount.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+.side-content .group-icon{
+    background: url(./assessts/users2.png) no-repeat;
+    background-size: cover;
+}
+.side-content .pages-icon{
+    background: url(./assessts/facebook-page.png) no-repeat;
+    background-size: cover;
+}
+.side-content .m-recent-icon{
+    background: url(./assessts/most-recent.png) no-repeat;
+    background-size: 2.8rem;
+}
+.side-content .groups-icon{
+    background: url(./assessts/group-users.png) no-repeat;
+    background-size: cover;
+}
+.side-content .marketplace-icon{
+    background: url(./assessts/store2.png) no-repeat;
+    background-size: cover;
+}
+.side-content .video-icon{
+    background: url(./assessts/watch2.png) no-repeat;
+    background-size: cover;
+}
+.side-content .memories-icon{
+    background: url(./assessts/recent.png) no-repeat;
+    background-size: cover;
+}
+.side-content .save-icon{
+    background: url(./assessts/save.png) no-repeat;
+    background-size: cover;
+}
+.left-sidebar p{
+    color: black;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+
+.center-content{
+    width: auto;
+    /* border: 1px solid black; */    
+}
+.story-section{
+    width: 550px;
+    height: fit-content;
+    margin: 2rem auto 1.5rem auto;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+}
+.story-icons{
+    width: 100%;
+    height: fit-content;
+    border-bottom: 1px solid lightgray;
+    padding: 1em 0em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.story-icons .icon{
+    width: 48%;
+}
+.story-icons a{
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.story{
+    position: relative;
+}
+.story .story-icon{
+    display: block;
+    background-image: url(./assessts/stories.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 3rem;
+    padding: 2.5em;
+}
+.story-icons .border-bottom:hover::before{
+    visibility: hidden;
+}
+.icon p{
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    color: blue;
+}
+.reel:hover{
+    background-color: hsl(216, 15%, 95%);
+    border-radius: 1rem;
+}
+.reel .reel-icon{
+    display: block;
+    background-image: url(./assessts/reels.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2.5rem;
+    padding: 2.5em;
+}
+
+.stories{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1.5rem auto;
+}
+.stories .story{
+    width: 13rem;
+    height: 20rem;
+    border-radius: 1rem;
+    position: relative;
+    transition: all 300ms ease-in-out;
+    /* border: 1px solid red; */
+}
+
+
+.stories .story::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(216, 15%, 98%);
+    border-radius: 1rem;
+    z-index: 2;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+    /* border: 1px solid greenyellow; */
+}
+.stories .story:hover::after{
+    opacity: 1;
+}
+.stories .story:hover .user-pro-box,
+.stories .story:hover .story-1,
+.stories .story:hover .story-2,
+.stories .story:hover .story-3{
+    background-size: 103%;
+}
+.stories a{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+.story .user-pro-box{
+    display: block;
+    width: 100%;
+    height: 13rem;
+    background: url(./assessts/user-acccount.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.stories .plus-icon{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border: 4px solid white;
+    border-radius: 50%;
+    background-image: url(./assessts/plus2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    left: 35%;
+    bottom: 20%;
+}
+.stories .create-story{
+    display: block;
+    font-size: 1.6rem;
+    color: black;
+    text-align: center;
+    margin: 3rem auto 1rem auto;
+}
+
+.stories .story-1{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url(./assessts/alikhan.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+.stories .story-2{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url(./assessts/mrkz.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+.stories .story-3{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url(./assessts/majidkhan.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+.stories .profile-pic{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border: 3px solid blue;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.story .pic1{
+    background-image: url(./assessts/alikhan-fb-pro.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.story .pic2{
+    background-image: url(./assessts/fb-friend2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.story .pic3{
+    background-image: url(./assessts/fb-friend1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+
+
+
+.right-sidebar{
+    max-width: 450px;
+    width: 300px;
+    height: 100vh;
+    border: 1px solid black;
+}
+.right-sidebar h3{
+    font-size: 1.5rem;
+    color: rgb(133, 133, 133);
+    margin: 1rem 0.7rem;
+}
+.right-sidebar .med-text{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: black;
+}
+.right-sidebar p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(133, 133, 133);
+    margin-left: 0.5rem;
+}
+.side-content .page-icon{
+    background: url(./assessts/fb-page.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+.side-content .dots-manu{
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+.side-content .dots-manu:hover{
+    background-color: hsl(216, 15%, 90%);
+    cursor: pointer;
+}
+.dots-manu span{
+    display: block;
+    font-size: 2.5rem;
+    color: rgb(133, 133, 133);
+    margin-top: -0.7rem;
+}
+.side-content .message-icon{
+    background: url(./assessts/chat.png) no-repeat;
+    background-size: 2.5rem;
+}
+.side-content .notif-icon{
+    background: url(./assessts/bell.png) no-repeat;
+    background-size: 2.5rem;
+}
+.side-content .switch-account-icon{
+    background: url(./assessts/switch-account.png) no-repeat;
+    background-size: 2.5rem;
+}
+.side-content .promotion-icon{
+    background: url(./assessts/annouce.png) no-repeat;
+    background-size: 2.5rem;
+}
+.header {
+    height: 95vh;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10rem;
+    padding: 2rem;
+}
+
+.main-content .box {
+    width: 400px;
+    height: 280px;
+    /* border: 1px solid black; */
+}
+
+.content-box .imag-box {
+    width: 250px;
+    height: 8rem;
+    /* border: 1px solid black; */
+}
+
+.imag-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.content-box h3 {
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    font-weight: lighter;
+    margin: 0em 1.5em;
+    font-size: var(--med-text);
+}
+
+.content-box p {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    margin: 0.3em 2.5em
+}
+
+.content-box .sign-pro {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    height: 14rem;
+    /* border: 1px solid greenyellow; */
+    margin: 1em 3em;
+    position: relative;
+}
+
+.sign-pro .id-box,
+.sign-pro .add-account {
+    width: 10rem;
+    height: 10rem;
+    /* border: 1px solid black; */
+}
+
+.sign-pro .id-box img {
+    width: 100%;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.sign-pro p {
+    position: absolute;
+    top: 69%;
+    width: 10rem;
+    margin-left: 0px;
+    padding: 1rem;
+    text-align: center;
+    background: white;
+}
+
+.sign-pro .black {
+    color: black;
+}
+
+.add-account .blue {
+    width: 4rem;
+    height: 4rem;
+    margin: 3.5rem auto;
+}
+
+.add-account .blue .blu {
+    color: blue;
+}
+
+.container .form-box {
+    width: 330px;
+    margin-top: 7rem;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 2px 2px 2rem rgba(0, 0, 0, 0.185);
+}
+
+.form-box input {
+    display: block;
+    width: 95%;
+    margin: 1rem auto;
+    padding: 0.9rem 1.5rem;
+    border-radius: 0.4rem;
+    outline: none;
+    border: 2px solid lightgray;
+}
+
+.form-box input:focus {
+    border: 2px solid rgb(86, 86, 242);
+}
+
+.form-box .log {
+    display: block;
+    width: 95%;
+    margin: 1.5rem auto;
+    padding: 0.7rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+
+.form-box .f-btn {
+    display: block;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    padding: 1rem 0rem;
+}
+
+/* .form-box .f-btn::after{
+    content: "";
+    display: block;
+    width: 95%;
+    border: 1px solid lightgray;
+    margin: 1.5rem auto;
+} */
+
+.form-box .create-btn {
+    display: block;
+    width: 60%;
+    /* height: 3rem; */
+    margin: 1rem auto;
+    padding: 1rem 0rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: white;
+    background-color: green;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+
+.form-box .bottom-text {
+    margin: 5.5rem 0rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.bottom-text a {
+    color: black;
+    font-weight: bolder;
+}
+
+.bottom-text a:hover {
+    color: blue;
+}
+
+.footr{
+    background-color: white;
+    width: 100%;
+    height: 7rem;
+}
+
+@media (max-width: 500px){
+    html{
+        font-size: 55%;
+    }
+    body{
+        background-color: white;
+    }
+
+
+    /* ########## login form styling ############## */
+    .main-content{
+        display: block;
+        padding: 0px;
+        margin-top: 0px;
+    }
+    .main-content .content-box{
+        display: none;
+    }
+    .main-content .form-box{
+        margin-top: 7rem;
+        padding: 0rem 2.5rem;
+        width: 100%;
+        box-shadow: none;
+    }
+    .main-content::before{
+        content: "";
+        display: block;
+        background: url(./img/dF5SId3UHWd.svg) , blue;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 350px;
+        width: 100%;
+        height: 150px;
+    }
+    .form-box input{
+        border: none;
+        border-bottom: 2px solid lightgray;
+        width: 80%;
+        margin: 2rem auto 3rem auto;
+    }
+    .form-box input:focus{
+        border: none;
+        border-bottom: 2px solid blue;
+    }
+
+    .form-box .log{
+        width: 80%;
+        border: none;
+        padding: 1rem 0rem;
+    }
+    .form-box .f-btn{
+        color: blue;
+        font-size: 1.7rem;
+        font-weight: bolder;
+    }
+
+
+    .form-box .bottom-text{
+        display: none;
+    }
+
+    .form-box .create-btn{
+        width: 70%;
+        margin-top: 5rem;
+    }
+    .container {
+        width: 100%;
+        margin: auto;
+    }
+
+
+    /* ########## home styling ########### */
+    .header-section{
+        height: fit-content;
+    }
+    #nav-bar{
+        height: fit-content;
+        padding: 0em;
+    }
+    .left-side{
+        width: auto;
+    }
+    .fb-logo,
+    .input-box{
+        display: none;
+    }
+    .facebook-logo{
+        display: block;
+        width: 17rem;
+        height: 5rem;
+        background: url(./assessts/facebook.svg) no-repeat;
+        background-position: left;
+        background-size: cover;
+    }
+
+    .border-bottom::before{
+        top: 119%;
+        left: 8%;
+    }
+    .home{
+        width: auto;
+        height: fit-content;
+        padding: 0.5em 1em 0em 0em;
+    }
+    .border-bottom{
+        left: 2%;
+    }
+    .home a{
+        margin-left: 2rem;
+    }
+    .watch-video{
+        background-image: url(./assessts/group.png);
+    }
+    .icons::after{
+        content: "Friends";
+        width: auto;
+    }
+    .market-place{
+        background-image: url(./assessts/watching.png);
+    }
+    .market::after{
+        content: "Watch";
+        left: 20%;
+    }
+    .groups{
+        background-image: url(./assessts/bell.png);
+        background-size: 3rem;
+    }
+    .group::after{content: "Notification";
+        left: 10%;
+    }
+    .game{
+        width: auto;
+        height: fit-content;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+    .game::after{content: "Account";
+        left: -55%;
+    }
+    .games{
+        background-image: url(./assessts/user-acccount.jpg);
+        background-size: cover;
+        border-radius: 100%!important;
+        width: 4rem;
+        height: 4rem;
+    }
+    .right-side{
+        position: absolute;
+        top: 10%;
+        right: 3%;
+    }
+    .account-label{
+        display: none;
+    }
+    .right-side .icons{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .right-side .manu{
+        background-image: url(./assessts/plus.png);
+        background-size: 2rem;
+    }
+    .right-side .messenger{
+        background-image: url(./assessts/search-interface-symbol.png);
+        background-size: 2rem;
+    }
+    .right-side .notific{
+        background-image: url(./assessts/messenger.png);
+    }
+    .right-side .notific::before{
+        content: "9";
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 100%;
+        top: 5%;
+        right: 5%;
+        padding: 0em;
+        font-size: 1rem;
+    }
+}
