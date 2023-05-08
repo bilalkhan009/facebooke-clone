@@ -27,7 +27,12 @@ body {
     margin: auto;
 }
 
-
+.sec-heading{
+    font-size: 1.5rem;
+}
+.text-grey{
+    color: rgb(133, 133, 133);
+}
 /* ####### home/news feed section */
 
 
@@ -45,6 +50,7 @@ body {
     align-items: center;
     padding: 0em 2em;
     box-shadow: 0px 0px 10px rgba(69, 69, 69, 0.141);
+    z-index: 999;
 }
 
 .left-side{
@@ -67,6 +73,7 @@ body {
 .left-side .input-box{
     width: 25rem;
     position: relative;
+    margin-left: 0.7rem;
     /* border: 1px solid green; */
 }
 .input-box input{
@@ -88,10 +95,10 @@ body {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
+    opacity: 0.5;
 }
 ::placeholder{
     font-size: 1.6rem;
-    text-transform: capitalize;
 }
 
 .tabs-section{
@@ -152,12 +159,11 @@ body {
     bottom: -85%;
     left: 20%;
     padding: 0.7em 1em;
-    background-color: rgba(33, 33, 33, 0.654);
+    background-color: rgba(33, 33, 33, 0.754);
     color: white;
     font-size: 1.3rem;
     border-radius: 1rem;
     visibility: hidden;
-    transition: all 100ms ease-out;
 }
 .market::after{
     content: "Marketplace";
@@ -182,6 +188,7 @@ body {
     display: inline-block;
     width: 100%;
     height: 100%;
+    opacity: 0.7;
 }
 
 .watch-video{
@@ -275,7 +282,7 @@ body {
     background-image: url(./assessts/manu.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 2.2rem;
+    background-size: 2rem;
 }
 .right-side .messenger{
     display: inline-block;
@@ -329,14 +336,16 @@ body {
     width: 100%;
     padding: 1.5em;
 }
-.side-content .hover-box:hover{
+.side-content .hover-box{
+    transition: all 300ms ease-in-out;
+}
+.hover-box:hover{
     background-color: hsl(216, 15%, 89%);
     border-radius: 0.7rem;
 }
 .side-content a{
-    display: block!important;
     width: 100%;
-    display: flex!important;
+    display: flex;
     align-items: center;
     padding: 0.8em 0em;
 }
@@ -384,25 +393,78 @@ body {
     background: url(./assessts/save.png) no-repeat;
     background-size: cover;
 }
+.side-content .down-arrow{
+    background: url(./assessts/down-arrow.png) no-repeat, hsl(216, 15%, 83%);
+    background-size: 1.5rem;
+    background-position: center center;
+    border-radius: 50%;
+}
+.side-content .ball-icon{
+    background: url(./assessts/8ball-pol.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 1rem;
+}
+.side-content .hr-line{
+    position: relative;
+}
+.side-content .hr-line::after{
+    content: "";
+    position: absolute;
+    left: 2%;
+    bottom: -20%;
+    display: block;
+    width: 95%;
+    border: 1px solid hsl(216, 15%, 85%);
+}
+.side-content .shortcut-box{
+    margin: 2.5rem auto 1rem auto;
+    padding: 0em 0.5em;
+}
+.shortcut-box a{
+    display: inline-block;
+    width: auto;
+    font-size: 1.6rem;
+    color: blue;
+    visibility: hidden;
+    transition: all 300ms ease-in-out;
+}
+.side-content .shortcut-box:hover a{
+    visibility: visible;
+}
 .left-sidebar p{
     color: black;
     margin-left: 1rem;
     font-size: 1.4rem;
     font-weight: bold;
 }
-
-
-.center-content{
+.privacy-policy p{
+    line-height: 0rem;
+}
+.privacy-policy a{
+    display: inline-block;
     width: auto;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+.privacy-policy a:hover{
+    text-decoration: underline;
+}
+.privacy-policy .underline-non:hover{
+    text-decoration: none;
+}
+.center-content{
+    width: 550px;
     /* border: 1px solid black; */    
 }
 .story-section{
-    width: 550px;
+    width: 100%;
     height: fit-content;
     margin: 2rem auto 1.5rem auto;
     background-color: white;
     border: 1px solid lightgray;
     border-radius: 1rem;
+    box-shadow: 0px 0px 1.5rem hsl(216, 15%, 85%);
 }
 .story-icons{
     width: 100%;
@@ -487,7 +549,7 @@ body {
     border-radius: 1rem;
     z-index: 2;
     opacity: 0;
-    transition: all 500ms ease-in-out;
+    transition: all 300ms ease-in-out;
     /* border: 1px solid greenyellow; */
 }
 .stories .story:hover::after{
@@ -604,18 +666,648 @@ body {
     border-radius: 50%;
 }
 
+.uploade-box{
+    width: 100%;
+    background-color: white;
+    height: fit-content;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1em;
+    border: 1px solid hsl(216, 15%, 85%);
+    box-shadow: 0px 0px 1.5rem hsl(216, 15%, 85%);
+}
+.uploade-box .account-box{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+.account-box .account-icon{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(./assessts/user-acccount.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+.uploade-box input{
+    display: block;
+    width: 90%;
+    padding: 1em;
+    border: none;
+    outline: none;
+    border-radius: 2.5rem;
+    background-color: hsl(216, 15%, 93%);
+}
+.uploade-box input:focus{
+    background-color: hsl(216, 15%, 91%);
+}
+.uploade-box .border{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem auto 0rem auto;
+    border-top: 1px solid hsl(216, 15%, 85%);
+}
+.uploade-box .box{
+    width: 32%;
+    margin: 0.7rem auto 0rem auto;
+    padding: 0.7em 0em;
+    transition: all 300ms ease-in-out;    
+}
+.uploade-box .hover-box:hover{
+    background-color: hsl(216, 15%, 93%);
+    border-radius: 1rem;
+}
+.uploade-box a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.uploade-box p{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+.uploade-box span{
+    display: inline-block;
+    padding: 1.5em;
+}
+.uploade-box .live-vid-icon{
+    background: url(./assessts/live-video.png) no-repeat;
+    background-size: 3rem;
+}
+.uploade-box .photos-icon{
+    background: url(./assessts/photos.png) no-repeat;
+    background-size: 3rem;
+}
+.uploade-box .emoji-icon{
+    background: url(./assessts/smiles.png) no-repeat;
+    background-size: 3rem;
+}
 
+.uploade-contents{
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    margin: 1.5rem auto;
+    border: 1px solid hsl(216, 15%, 85%);
+    border-radius: 1rem;
+}
+.uploade-contents .uploade-texts{
+    width: 100%;
+    padding: 1.5em;
+}
+.uploade-texts p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.uploade-texts span{
+    font-weight: lighter;
+}
+.uploade-contents .align-both{
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    /* border: 1px solid red; */
+}
+.uploade-contents .user-pro-details{
+    width: 400px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 1rem;
+    position: absolute;
+    top: 100%;
+    margin-left: -15rem;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1.5em;
+    box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, 0.222);
+    visibility: hidden;
+    transition: all 350ms linear;
+    /* border: 1px solid red; */
+}
+.uploade-contents .user-pro-details .left-side{
+    width: 30%;
+}
+.uploade-contents .user-pro-details .fb-user-icon{
+    width: 10rem;
+    height: 10rem;
+    border: 3px solid blue;
+    border-radius: 50%;
+}
+.uploade-contents .user-pro-details .fb-user-icon .user-icon{
+    margin: 0.5rem;
+}
+.uploade-contents .user-pro-details .right-side{
+    display: block;
+    width: 70%;
+    /* border: 1px solid green; */
+}
+.uploade-contents .user-pro-details h2{
+    font-size: 2rem;
+}
+.uploade-contents .user-pro-details p{
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin: 1.5rem 0 1rem 0;
+    word-spacing: 0.3rem;
+}
+.uploade-contents .user-pro-details a{
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: black;
+    text-transform: none;
+}
+.uploade-contents .user-pro-details a:hover{
+    text-decoration: underline;
+}
+.uploade-contents .user-pro-details .location-icon{
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url(./assessts/location-pin-svgrepo-com.svg) no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+.uploade-contents .user-pro-details .info-icon{
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url(./assessts/info-circle-svgrepo-com.svg) no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+}
+.uploade-contents .user-pro-details .user-req-icon{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url(./assessts/user-right-arrow-svgrepo-com.svg) no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+}
+.uploade-contents .user-pro-details .follow-icon{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url(./assessts/follow.png) no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+}
+.uploade-contents .user-pro-details .box-o{
+    width: 37%;
+    background-color: hsl(216, 15%, 93%);
+    border-radius: 0.5rem;
+}
+.uploade-contents .user-pro-details .box-o:hover{
+    background-color: hsl(216, 15%, 90%);
+}
+.uploade-contents .user-pro-details .messenger-box{
+    background-color: #60ADE8;
+}
+.uploade-contents .user-pro-details .messenger-box:hover{
+    background-color: #47a5ed;
+}
+.uploade-contents .user-pro-details .box-o a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.uploade-contents .user-pro-details .box-o .user-friend{
+    display: inline-block;
+    background: url(./assessts/usercheck.png) no-repeat;
+    background-size: 2rem;
+    background-position: center center;
+    padding: 1.2em 1em; 
+}
+.uploade-contents .user-pro-details .box-o .messenger{
+    display: inline-block;
+    background: url(./assessts/messenger2.png) no-repeat;
+    background-size: 2.5rem;
+    background-position: center center;
+    padding: 1.2em 1em; 
+}
+.uploade-contents .user-pro-details .box-o .manu-icon{
+    display: inline-block;
+    background: url(./assessts/dots.png) no-repeat;
+    background-size: 2.5rem;
+    background-position: center center;
+    padding: 1.2em 1em;
+}
+.uploade-contents .user-pro-details .box-o a:hover{
+    text-decoration: none;
+}
+.uploade-contents .fb-user-icon{
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 2px solid blue;
+    border-radius: 50%;
+}
+.uploade-texts .user-texts-friends{
+    width: 70%;
+    margin-top: 0.5rem;
+}
+.user-texts-friends a{
+    color: black!important;
+    font-weight: bold;
+}
+.user-texts-friends a:hover{
+    text-decoration: underline;
+}
+.user-texts-friends span{
+    font-size: 1.2rem;
+    color: rgb(133, 133, 133);
+}
+.user-texts-friends .clock-icon{
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(./assessts/clock.png) no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+}
+.user-texts-friends .world-icon{
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(./assessts/world.png) no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+}
+.uploade-texts .box{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    margin-top: 0.7rem;
+    transition: all 300ms ease-in-out;
+}
+.uploade-contents .box:hover{
+    background-color: hsl(216, 15%, 93%);
+}
+.uploade-contents .manu-icon{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(./assessts/dots.png) no-repeat;
+    background-size: 2rem;
+    background-position: center;
+    opacity: 0.7;
+}
+.uploade-contents .close-icon{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(./assessts/close.png) no-repeat;
+    background-size: 1.5rem;
+    background-position: center;
+    opacity: 0.7;
+}
+.texts p{
+    line-height: 0;
+}
+.texts .hundred{
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background: url(./assessts/one-hundred.png) no-repeat;
+    background-position: bottom;
+    background-size: 2rem;
+}
+.texts p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.other-friends span{
+    display: block;
+    font-size: 1.6rem;
+    padding: 0.2em 0em;
+}
+.img-post{
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid green; */
+}
+.img-post img{
+    display: block;
+    width: 100%;
+}
+.uploade-contents .likes-comments-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 1.5rem;
+    padding-bottom: 0.5em;
+}
+.likes-comments-box .like-icon{
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.7rem;
+    background: url(./assessts/like.png) no-repeat;
+    background-size: cover;
+}
+.likes-comments-box .heart-icon{
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.7rem;
+    background: url(./assessts/heart.png) no-repeat;
+    background-size: cover;
+}
+.likes-comments-box .comment-icon{
+    width: 1.7rem;
+    height: 1.7rem;
+    display: inline-block;
+    background: url(./assessts/comment-icon.png) no-repeat;
+    background-size: cover;
+    margin: 0rem 0.5rem;
+    opacity: 0.5;
+}
+.likes-comments-box .share-icon{
+    width: 1.7rem;
+    height: 1.7rem;
+    display: inline-block;
+    background: url(./assessts/share-svgrepo-com.svg) no-repeat;
+    background-size: cover;
+    margin: 0rem 0.5rem;
+    opacity: 0.5;
+}
+.likes-comments-box p:hover{
+    text-decoration: underline;
+}
+.likes-comments-box span,
+.likes-comments-box a{
+    font-size: 1.6rem;
+    color: rgb(133, 133, 133);
+}
+.likes-comments-box .hover-box{
+    width: 33%;
+    margin-top: 0.6rem;
+    border-radius: 0.5rem;
+    transition: all 300ms ease-in-out;
+}
+.likes-comments-box .hover-box a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 0em;
+}
+.likes-comments-box .hover-box .icon{
+    width: 2rem;
+    height: 2rem;
+}
+.likes-comments-box .like-box .react-icons{
+    width: 380px;
+    height: 5rem;
+    background-color: white;
+    box-shadow: 0px 0px 1.5rem rgba(140, 140, 140, 0.121);
+    border-radius: 2rem;
+    position: absolute;
+    left: 0%;
+    z-index: 9;
+    transition: all 350ms linear;
+    visibility: hidden;;
+}
+.like-box .react-icons .icon{
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem 0.5rem;
+    border-radius: 50%;
+}
+.like-box .react-icons .care-icon{
+    background: url(./assessts/care.png) no-repeat;
+    background-size: cover;
+}
+.like-box .react-icons .laugh-icon{
+    background: url(./assessts/laughing.png) no-repeat;
+    background-size: cover;
+}
+.like-box .react-icons .surprise-icon{
+    background: url(./assessts/surprised.png) no-repeat;
+    background-size: cover;
+}
+.like-box .react-icons .sad-icon{
+    background: url(./assessts/sad.png) no-repeat;
+    background-size: cover;
+}
+.like-box .react-icons .angry-icon{
+    background: url(./assessts/angry.png) no-repeat;
+    background-size: cover;
+}
+.likes-comments-box .like-box:hover .react-icons{
+    visibility: visible;
+    transform: translateY(-100%);
+}
+.uploade-contents .comment-type-box{
+    padding: 0em 1.5em 0.7em 1.5em;
+}
+.uploade-contents .user-account{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+.uploade-contents .user-icon{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url(./assessts/user-acccount.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+.uploade-contents .comment-input{
+    width: 92%;
+    position: relative;
+    /* border: 1px solid red; */
+}
+.comment-input input{
+    width: 100%;
+    padding: 1em;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    background: hsl(216, 15%, 95%);
+    transition: all 300ms ease-in-out;
+}
+.comment-input input:focus{
+    background: hsl(216, 15%, 93%);
+}
+.comment-input .emoji-icons{
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 8%;
+    right: 0%;
+    /* transition: all 300ms ease-in-out; */
+}
+.comment-input .emoji-icons a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: all 300ms ease-in-out;
+}
+.comment-input .avatar{
+    right: 35%;
+}
+.comment-input .emoji{
+    right: 27%;
+}
+.comment-input .camera{
+    right: 19%;
+}
+.comment-input .gif{
+    right: 11%;
+}
+.comment-input .sticker{
+    right: 2%;
+}
+.comment-input .emoji-icons:hover{
+    background-color: hsl(216, 15%, 90%);
+}
+.emoji-icons .avatar-icon{
+    background: url(./assessts/avatar-emojis.svg) no-repeat;
+    background-position: center center;
+    background-size: 1.7rem;
+}
+.emoji-icons .emoji-icon{
+    background: url(./assessts/emojis.svg) no-repeat;
+    background-position: center center;
+    background-size: 2rem;
+}
+.emoji-icons .camera-icon{
+    background: url(./assessts/camera-svgrepo-com.svg) no-repeat;
+    background-position: center center;
+    background-size: 1.7rem;
+}
+.emoji-icons .gif-icon{
+    background: url(./assessts/gif-svgrepo-com.svg) no-repeat;
+    background-position: center center;
+    background-size: 2rem;
+}
+.emoji-icons .sticker-icon{
+    background: url(./assessts/sticker-svgrepo-com.svg) no-repeat;
+    background-position: center center;
+    background-size: 1.9rem;
+}
+.uploade-contents .fb-pro-pic{
+    width: 90%;
+    height: 90%;
+    background: url(./assessts/fida-zahid.jpg) no-repeat!important;
+    background-size: cover!important;
+    margin: 0.2rem 0.3rem
+}
+.uploade-texts .fb-pro-pic1{
+    width: 90%;
+    height: 90%;
+    background: url(./assessts/saadkhan.jpg) no-repeat!important;
+    background-size: cover!important;
+    margin: 0.2rem 0.3rem
+}
+.uploade-contents .fb-pro-pics:hover{
+    opacity: 0.9;
+}
+.uploade-contents .fb-user-icon:hover .user-pro-details{
+    visibility: visible;
+    opacity: 1;
+}
+.uploade-contents .show-user-pro:hover .user-pro-details{
+    visibility: visible;
+    opacity: 1;
+}
+
+.uploade-contents .other-comments .commented-text{
+    width: auto;
+    background-color: hsl(216, 15%, 95%);
+    border-radius: 1.5rem;
+    margin-left: 1rem;
+    padding: 0.8em 1em;
+    text-align: center;
+    position: relative;
+}
+.uploade-contents .other-comments .fb-user-icon{
+    border: none;
+}
+.uploade-contents .other-comments .user-icon{
+    background: url(./assessts/khubib.jpg) no-repeat;
+    background-size: cover;
+    margin: 0rem!important;
+}
+.uploade-contents .other-comments{
+    display: flex;
+    align-items: center;
+}
+.commented-text p{
+    font-size: 1.5rem;
+}
+.commented-text a{
+    font-weight: bold;
+    color: black;
+}
+.commented-text a:hover{
+    text-decoration: underline;
+}
+.commented-text .like-icon{
+    display: block;
+    width: 2.3rem;
+    height: 2.3rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    background: url(./assessts/like.png) no-repeat;
+    background-size: cover;
+}
+.commented-text .reduce-r{
+    top: 40%;
+    right: -5%;
+}
+.commented-text .bottom-box{
+    width: auto;
+    height: 2rem;
+    position: absolute;
+    top: 105%;
+    left: 10%;
+    /* border: 1px solid red; */
+}
+.commented-text .reduce-l{
+    left: 3%;
+}
+.commented-text .bottom-box a{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: rgb(133, 133, 133);
+}
+
+.uploade-pics .fb-user-icon .fb-pro-pic2{
+    width: 90%;
+    height: 90%;
+    background: url(./assessts/fb-pro-pic1.jpg) no-repeat;
+    background-size: cover;
+    margin: 0.3rem;
+}
 
 
 .right-sidebar{
     max-width: 450px;
     width: 300px;
     height: 100vh;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .right-sidebar h3{
-    font-size: 1.5rem;
-    color: rgb(133, 133, 133);
     margin: 1rem 0.7rem;
 }
 .right-sidebar .med-text{
@@ -635,23 +1327,25 @@ body {
     border-radius: 50%;
 }
 .side-content .dots-manu{
+    display: block;
     width: 3rem;
     height: 3rem;
-    text-align: center;
     border-radius: 50%;
+    padding-top: 0.7em;
     position: absolute;
-    top: 0%;
+    top: -35%;
     right: 0%;
+    transition: all 300ms ease-in-out;
 }
 .side-content .dots-manu:hover{
-    background-color: hsl(216, 15%, 90%);
-    cursor: pointer;
+    background-color: hsl(216, 15%, 88%);
 }
-.dots-manu span{
-    display: block;
-    font-size: 2.5rem;
-    color: rgb(133, 133, 133);
-    margin-top: -0.7rem;
+.side-content .dots-manu a{
+    display: inline-block;
+    background: url(./assessts/dots.png) no-repeat;
+    background-size: 2.3rem;
+    background-position: center;
+    opacity: 0.5;
 }
 .side-content .message-icon{
     background: url(./assessts/chat.png) no-repeat;
@@ -669,6 +1363,226 @@ body {
     background: url(./assessts/annouce.png) no-repeat;
     background-size: 2.5rem;
 }
+.friends-request-box{
+    width: 90%;
+    margin: auto;
+    border-top: 1px solid hsl(216, 15%, 80%);
+    border-bottom: 1px solid hsl(216, 15%, 80%);
+}
+.align-both{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.align-both a{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: rgb(45, 45, 255);
+}
+.friends-request-box .req-box{
+    position: relative;
+    height: 11.5rem;
+    margin: 1rem auto;
+    /* border: 1px solid red; */
+}
+.req-box a{
+    /* border: 1px solid red; */
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background 300ms ease-in-out;
+}
+.req-box a:hover{
+    background-color: hsl(216, 15%, 90%);
+    border-radius: 1rem;
+}
+.friends-request-box .user-req{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: url(./assessts/Dr-wahab.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+.req-box .req-text{
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    left: 23%;
+    color: black;
+}
+
+.req-box .friends{
+    /* border: 1px solid yellowgreen; */
+    width: auto;
+    display: flex;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+.friends .friend{
+    display: block;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+}
+.friends .friend1{
+    display: block;
+    background: url(./assessts/user-acccount.jpg) no-repeat;
+    background-size: cover;
+}
+.friends .friend2{
+    background: url(./assessts/khubib.jpg) no-repeat;
+    background-size: cover;
+    margin-left: -0.4rem;
+    border: 2px solid hsl(216, 15%, 94%);
+}
+.friends span{
+    font-size: 1.2rem;
+    color: rgb(133, 133, 133);
+    margin-left: 0.5rem;
+}
+
+.req-box .btns{
+    /* border: 1px solid yellowgreen; */
+    width: 75%;
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btns .btn{
+    width: 45%;
+    padding: 0.7em 1em;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background 400ms ease-in-out;
+}
+.btns .conform-btn{
+    color: white;
+    background-color: rgb(70, 70, 255);
+}
+.btns .conform-btn:hover{
+    background-color: rgb(59, 59, 255);
+}
+.btns .delete-btn{
+    background-color: hsl(216, 15%, 83%);
+}
+.btns .delete-btn:hover{
+    background-color: hsl(216, 15%, 85%);
+}
+.side-content .birth-icon{
+    background: url(./assessts/gift.png) no-repeat;
+    background-size: 2.5rem;
+    background-position: top left;
+    padding: 0.5em 1.5em;
+}
+.side-content .birth-box p{
+    color: black;
+    font-weight: lighter;
+}
+.birth-box .font-bold{
+    font-weight: bold!important;
+}
+.right-sidebar .align-contact{
+    margin: 1.5rem auto;
+    padding: 0.7em 0em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid hsl(216, 15%, 70%);
+}
+.links-icons span{
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    margin: 0.5rem;
+    padding: 0.7em;
+    transition: all 300ms ease-in-out;
+}
+.links-icons span:hover{
+    background-color: hsl(216, 15%, 85%);
+}
+.links-icons a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    position: relative;
+}
+.links-icons a::after{
+    display: none;
+    font-size: 1.3rem;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 1em 0em;
+    border-radius: 0.7rem;
+    position: absolute;
+    margin-top: 2rem;
+    margin-left: -4.5rem;
+}
+.links-icons .video-metting-icon{
+    background: url(./assessts/video-call.png) no-repeat;
+    background-size: cover;
+}
+.links-icons .video-metting-icon::after{
+    content: "New call";
+    width: 7rem;
+}
+.links-icons .video-metting-icon:hover::after{
+    display: block;
+}
+.links-icons .search-icon{
+    background: url(./assessts/search-interface-symbol.png) no-repeat;
+    background-size: 2rem;
+}
+.links-icons .search-icon::after{
+    content: "Search for a name or group";
+    width: 18rem;
+    margin-left: -12rem;
+}
+.links-icons .search-icon:hover::after{
+    display: block;
+}
+.links-icons .dots-icon{
+    background: url(./assessts/dots.png) no-repeat;
+    background-size: cover;
+}
+.links-icons .dots-icon::after{
+    content: "Options";
+    width: 6rem;
+    margin-left: -4rem;
+}
+.links-icons .dots-icon:hover::after{
+    display: block;
+}
+
+
+
+
+
+
+
 .header {
     height: 95vh;
 }
@@ -919,7 +1833,7 @@ body {
     }
 
 
-    /* ########## home styling ########### */
+    /* ########## home styling ###########
     .header-section{
         height: fit-content;
     }
@@ -1027,5 +1941,341 @@ body {
         right: 5%;
         padding: 0em;
         font-size: 1rem;
-    }
+    } */
 }
+
+
+@media (max-width: 700px) {
+    html{
+        font-size: 55%; 
+    }
+     /* ########## home styling ########### */
+     .header-section{
+        height: fit-content;
+    }
+    .left-side{
+        width: auto;
+        /* border: 1px solid red; */
+    }
+    .input-box{
+        display: none;
+    }
+    .small-dev-icon{
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        background-color: hsl(216, 15%, 95%);
+        border-radius: 50%;
+        margin-left: 1rem;
+    }
+    .last-small-dev-icon{
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        margin-left: 1rem;
+        transition: all 300ms ease-in-out;
+    }
+    .last-small-dev-icon:hover{
+        background-color: hsl(216, 15%, 90%);
+        border-radius: 0.7rem;
+    }
+    .search-icon{
+        display: block;
+        background: url(./assessts/search-interface-symbol.png) no-repeat;
+        background-position: center;
+        background-size: 2.2rem;
+        padding: 2em 1em;
+    }
+    .manu-bargr-icon{
+        display: block;
+        background: url(./assessts/menu1.png) no-repeat;
+        background-position: center;
+        background-size: 4rem;
+        padding: 4.5em 1em 0.5em 1em;
+        opacity: 0.5;
+    }
+
+    .tabs-section{
+        display: none;
+    }
+    .border-bottom::before{
+        top: 115%;
+        left: 8%;
+    }
+     .home{
+        width: auto;
+        height: fit-content;
+        padding: 0.5em 1em 0em 0em;
+    }
+
+    .home a{
+        margin-left: 2rem;
+    }
+    .right-side{
+        width: fit-content;
+        position: absolute;
+        top: 10%;
+        right: 3%;
+    }
+    .right-side .manu-label::after{
+        content: "Create";
+    }
+    .right-side .manu{
+        background-image: url(./assessts/plus.png);
+        background-size: 2rem;
+        opacity: 0.7;
+    }
+    .right-side .notific::before{
+        content: "9";
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 100%;
+        top: 5%;
+        right: 5%;
+        padding: 0em;
+        font-size: 1rem;
+    }
+
+    .center-content{
+        margin: 0rem auto!important;
+    }
+    .story-section{
+        border: none;
+        border-bottom: 1px solid hsl(216, 15%, 90%);
+    }
+
+    .uploade-contents .user-pro-details{
+        margin-left: 0rem;
+        display: none;
+    }
+    .uploade-contents .user-pro-details .small-dev{
+        margin-top: 7rem;
+    }
+
+
+
+    .left-sidebar,
+    .right-sidebar{
+        display: none;
+    }
+ }
+
+
+
+
+ @media (min-width: 701px) and (max-width: 900px) {
+    html{
+        font-size: 55%; 
+    }
+
+     /* ########## home styling ########### */
+     .header-section{
+        height: fit-content;
+    }
+    .left-side{
+        width: auto;
+        /* border: 1px solid red; */
+    }
+    .input-box{
+        display: none;
+    }
+    .small-dev-icon{
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        background-color: hsl(216, 15%, 95%);
+        border-radius: 50%;
+        margin-left: 1.5rem;
+    }
+    .hide-med{
+        display: none;
+    }
+    .search-icon{
+        display: block;
+        background: url(./assessts/search-interface-symbol.png) no-repeat;
+        background-position: center;
+        background-size: 2.2rem;
+        padding: 2em 1em;
+        opacity: 0.7;
+    }
+    .tabs-section{
+         width: fit-content;
+         position: absolute;
+         right: 35%;
+         /* border: 1px solid red; */
+    }
+    .icons{
+        width: 5.5rem;
+        margin: 0.5rem 1rem;
+        /* border: 1px solid red; */
+    }
+    .icons span{
+        background-size: 3rem;
+    }
+    .groups{
+        background-size: 4.5rem!important;
+    }
+    .border-bottom::before{
+        top: 120%;
+        left: 8%;
+    }
+     .home{
+        width: fit-content;
+        height: fit-content;
+        padding: 0.5em 1em 0.5em 0em;
+        /* border: 1px solid red; */
+    }
+    .border-bottom{
+        width: 20%;
+    }
+    .home a{
+        margin-left: 2rem;
+    }
+    .icons::after{
+        left: 0%;
+    }
+    .market::after{
+        left: -30%;
+    }
+    .game::after{
+        content: "manu";
+        left: 5%;
+    }
+    .games{
+        background-image: url(./assessts/menu1.png);
+        background-size: cover;
+        margin-top: 0.3rem;
+        opacity: 0.5;
+    }
+    .center-content{
+        margin: auto;
+    }
+
+    .right-side{
+        width: fit-content;
+        position: absolute;
+        top: 10%;
+        right: 2%;
+    }
+    .right-side .manu-label::after{
+        content: "Create";
+    }
+    .right-side .manu{
+        background-image: url(./assessts/plus.png);
+        background-size: 2rem;
+        opacity: 0.7;
+    }
+    .uploade-contents .user-pro-details{
+        margin-left: 0rem;
+    }
+    .uploade-contents .user-pro-details .small-dev{
+        margin-top: 7rem;
+    }
+    .left-sidebar,
+    .right-sidebar{
+        display: none;
+    }
+ }
+
+
+ @media (min-width: 901px) and (max-width: 1100px) {
+    html{
+        font-size: 55%; 
+    }
+
+     /* ########## home styling ########### */
+     .header-section{
+        height: fit-content;
+    }
+    .left-side{
+        width: auto;
+        /* border: 1px solid red; */
+    }
+    .input-box{
+        display: none;
+    }
+    .small-dev-icon{
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        background-color: hsl(216, 15%, 95%);
+        border-radius: 50%;
+        margin-left: 1.5rem;
+    }
+    .hide-med{
+        display: none;
+    }
+    .search-icon{
+        display: block;
+        background: url(./assessts/search-interface-symbol.png) no-repeat;
+        background-position: center;
+        background-size: 2.2rem;
+        padding: 2em 1em;
+    }
+
+    .tabs-section{
+         width: fit-content;
+         width: auto;
+         position: absolute;
+         right: 30%;
+        border: 1px solid red;
+    }
+    .icons{
+        margin: 0.5rem 1rem;
+    }
+    .icons span{
+        background-size: 3rem;
+    }
+    .groups{
+        background-size: 4.5rem!important;
+    }
+    .border-bottom::before{
+        top: 115%;
+    }
+     .home{
+        width: fit-content;
+        height: fit-content;
+        padding: 0.5em 1em 0.5em 0em;
+    }
+    .border-bottom{
+        width: 20%;
+    }
+    .home a{
+        margin-left: 4rem;
+    }
+    .game::after{
+        content: "manu";
+        left: 15%;
+    }
+    .games{
+        background-image: url(./assessts/menu1.png);
+        background-size: cover;
+        margin-top: 0.3rem;
+        opacity: 0.5;
+    }
+    .right-side{
+        width: fit-content;
+        position: absolute;
+        top: 10%;
+        right: 2%;
+    }
+    .right-side .manu{
+        background-image: url(./assessts/plus.png);
+        background-size: 2rem;
+    }
+
+    .center-content{
+        margin: auto;
+    }
+
+    .uploade-contents .user-pro-details{
+        margin-left: 0rem;
+    }
+    .uploade-contents .user-pro-details .small-dev{
+        margin-top: 7rem;
+    }
+    .left-sidebar{
+        display: none;
+    }
+   
+ }
