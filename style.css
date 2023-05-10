@@ -33,9 +33,140 @@ body {
 .text-grey{
     color: rgb(133, 133, 133);
 }
+
+
+/* ######## login-page styling */
+.sides{
+    width: 50%;
+    height: fit-content;
+    /* border: 1px solid black; */
+}
+.fb-logo-box{
+    width: 300px;
+    /* border: 1px solid green; */
+}
+.fb-logo-box img{
+    display: block;
+    width: 100%;
+}
+.left-side-box p{
+    font-size: 2.6rem;
+    padding: 0em 0em 0.5em 1em;
+}
+.section .right-side-box{
+    margin-top: 8rem;
+    text-align: center;
+}
+.section .white-bg{
+    width: 75%;
+    height: fit-content;
+    background-color: white;
+    margin-left: auto;
+    padding: 1.5em 2em;
+    border-radius: 0.7rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.200);
+}
+.white-bg h3{
+    font-size: 2rem;
+}
+.white-bg .edit-btn{
+    width: 5rem;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    padding: 0.2em 0.3em;
+    color: blue;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.white-bg .edit-btn:hover{
+    color: hsl(216, 15%, 50%);
+    background-color: hsl(216, 15%, 95%);
+    border-radius: 0.2rem;
+    box-shadow: 0px 0px 1px  1px hsl(216, 15%, 70%);
+}
+.white-bg .user-pro-pic-box{
+    width: 85%;
+    height: fit-content;
+    margin: 2rem auto;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+.white-bg .user-img{
+    width: 10rem;
+    height: 10rem;
+    margin: 2rem auto;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+}
+.user-img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.user-pro-pic-box p{
+    font-size: 1.6rem;
+    margin: 1rem auto;
+}
+.white-bg .btn-box{
+    width: 100%;
+    background-color: #2D88FF;
+    margin: 0.5rem auto;
+    border-radius: 0.8rem;
+    transition: all 300ms ease-in-out;
+}
+.white-bg .btn-box:hover{
+    background-color: #365899;
+}
+.white-bg .btn-box a{
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 0.7em 0em;
+}
+.white-bg .login-other-btn{
+    background-color: hsl(216, 15%, 90%);
+    margin: 1rem auto;
+}
+.white-bg .login-other-btn:hover{
+    background-color: hsl(216, 15%, 92%);
+}
+.white-bg .create-account-btn{
+    margin: 3rem auto;
+}
+.white-bg .create-account-btn a{
+    font-size: 1.6rem;
+}
+.white-bg .create-account-btn a:hover{
+    text-decoration: underline;
+}
+.page-box{
+    width: 75%;
+    margin-top: 3rem;
+    margin-left: auto;
+}
+.page-box p{
+    font-size: 1.4rem;
+}
+.page-box a{
+    color: black;
+    font-weight: bold;
+}
+.page-box a:hover{
+    text-decoration: underline;
+}
+.footer-section{
+    width: 100%;
+    height: 10rem;
+    margin-top: 5rem;
+    background-color: white;
+}
+
+
 /* ####### home/news feed section */
-
-
 /* ######## navbar styling ############# */
 #nav-bar{
     max-width: 1450px;
@@ -1374,7 +1505,7 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-.align-both a{
+.friends-request-box .align-both a{
     font-size: 1.5rem;
     text-transform: capitalize;
     color: rgb(45, 45, 255);
@@ -1581,187 +1712,6 @@ body {
 
 
 
-
-
-.header {
-    height: 95vh;
-}
-
-.main-content {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10rem;
-    padding: 2rem;
-}
-
-.main-content .box {
-    width: 400px;
-    height: 280px;
-    /* border: 1px solid black; */
-}
-
-.content-box .imag-box {
-    width: 250px;
-    height: 8rem;
-    /* border: 1px solid black; */
-}
-
-.imag-box img {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.content-box h3 {
-    font-size: 2.2rem;
-    text-transform: capitalize;
-    font-weight: lighter;
-    margin: 0em 1.5em;
-    font-size: var(--med-text);
-}
-
-.content-box p {
-    font-size: 1.3rem;
-    text-transform: capitalize;
-    margin: 0.3em 2.5em
-}
-
-.content-box .sign-pro {
-    display: flex;
-    justify-content: space-between;
-    width: 250px;
-    height: 14rem;
-    /* border: 1px solid greenyellow; */
-    margin: 1em 3em;
-    position: relative;
-}
-
-.sign-pro .id-box,
-.sign-pro .add-account {
-    width: 10rem;
-    height: 10rem;
-    /* border: 1px solid black; */
-}
-
-.sign-pro .id-box img {
-    width: 100%;
-    height: 10rem;
-    border-radius: 50%;
-}
-
-.sign-pro p {
-    position: absolute;
-    top: 69%;
-    width: 10rem;
-    margin-left: 0px;
-    padding: 1rem;
-    text-align: center;
-    background: white;
-}
-
-.sign-pro .black {
-    color: black;
-}
-
-.add-account .blue {
-    width: 4rem;
-    height: 4rem;
-    margin: 3.5rem auto;
-}
-
-.add-account .blue .blu {
-    color: blue;
-}
-
-.container .form-box {
-    width: 330px;
-    margin-top: 7rem;
-    padding: 1rem;
-    background-color: white;
-    box-shadow: 2px 2px 2rem rgba(0, 0, 0, 0.185);
-}
-
-.form-box input {
-    display: block;
-    width: 95%;
-    margin: 1rem auto;
-    padding: 0.9rem 1.5rem;
-    border-radius: 0.4rem;
-    outline: none;
-    border: 2px solid lightgray;
-}
-
-.form-box input:focus {
-    border: 2px solid rgb(86, 86, 242);
-}
-
-.form-box .log {
-    display: block;
-    width: 95%;
-    margin: 1.5rem auto;
-    padding: 0.7rem;
-    text-align: center;
-    text-transform: capitalize;
-    color: white;
-    background-color: blue;
-    border: none;
-    border-radius: 0.4rem;
-    font-size: 1.7rem;
-    font-weight: bolder;
-}
-
-.form-box .f-btn {
-    display: block;
-    font-size: 1.5rem;
-    text-transform: capitalize;
-    text-align: center;
-    border-bottom: 1px solid lightgray;
-    padding: 1rem 0rem;
-}
-
-/* .form-box .f-btn::after{
-    content: "";
-    display: block;
-    width: 95%;
-    border: 1px solid lightgray;
-    margin: 1.5rem auto;
-} */
-
-.form-box .create-btn {
-    display: block;
-    width: 60%;
-    /* height: 3rem; */
-    margin: 1rem auto;
-    padding: 1rem 0rem;
-    border-radius: 0.5rem;
-    text-align: center;
-    color: white;
-    background-color: green;
-    font-size: 1.6rem;
-    text-transform: capitalize;
-}
-
-.form-box .bottom-text {
-    margin: 5.5rem 0rem;
-    font-size: 1.3rem;
-    text-align: center;
-}
-
-.bottom-text a {
-    color: black;
-    font-weight: bolder;
-}
-
-.bottom-text a:hover {
-    color: blue;
-}
-
-.footr{
-    background-color: white;
-    width: 100%;
-    height: 7rem;
-}
-
 @media (max-width: 500px){
     html{
         font-size: 55%;
@@ -1949,6 +1899,29 @@ body {
     html{
         font-size: 55%; 
     }
+    /* ####### .login-page ######### */
+    .lg-full{
+        height: fit-content!important;
+    }
+    .sm-full{
+        width: 85%!important;
+    }
+    .section .wrapper-box{
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .sides{
+        width: 90%!important;
+    }
+    .white-bg{
+        width: 100%!important;
+    }
+    .page-box{
+        margin: 2rem auto;
+    }
+
+
      /* ########## home styling ########### */
      .header-section{
         height: fit-content;
@@ -2051,9 +2024,6 @@ body {
     .uploade-contents .user-pro-details .small-dev{
         margin-top: 7rem;
     }
-
-
-
     .left-sidebar,
     .right-sidebar{
         display: none;
@@ -2066,6 +2036,15 @@ body {
  @media (min-width: 701px) and (max-width: 900px) {
     html{
         font-size: 55%; 
+    }
+
+    /* ######## login-page ######### */
+    .sm-full{
+        width: 100%!important;
+        height: fit-content!important;
+    }
+    .right-side-box{
+        margin-right: 3rem;
     }
 
      /* ########## home styling ########### */
